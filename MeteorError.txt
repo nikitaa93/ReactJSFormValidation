@@ -1,0 +1,36 @@
+﻿Metoer Error 
+
+nikita@nikita:~/nikita$ meteor npm install --save react react-dom
+[..................] / rollbackFailedOptional: verb npm-session f189e127e27e6aa
+npm WARN saveError ENOENT: no such file or directory, open '/home/nikita/nikita/package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open '/home/nikita/nikita/package.json'
+npm WARN nikita No description
+npm WARN nikita No repository field.
+npm WARN nikita No README data
+npm WARN nikita No license field.
+
++ react-dom@16.2.0
++ react@16.2.0
+added 18 packages in 9.309s
+
+
+Solution : run this commans inside the app folder
+
+
+
+2. Inside Main.js
+use this...
+Meteor:Meteor.startup(() => {
+render(<App />, document.getElementById('render-target')); }),
+
+
+instead of 
+
+Meteor.startup(() => {
+
+
+render(<App />, document.getElementById('render-target'));
+
+
+As m entioned in tutorial
